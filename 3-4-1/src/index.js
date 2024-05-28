@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import EventCompare from './EventCompare';
+import EventError from './EventError';
+import EventMouse from './EventMouse';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <EventMouse alt="ロゴ画像"
+      beforeSrc="https://web-deli.com/image/linkbanner_l.gif"
+      afterSrc="https://web-deli.com/image/home_chara.gif" />
+
+    <EventCompare />
+
+    <EventError src='https://web-deli.com/image/nothing.gif' alt="サンプル画像" />
   </React.StrictMode>
 );
 
