@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import noimage from './images/noimage.jpg';
 
 export default function EventError({ src, alt }) {
   const [path, setPath] = useState(src);
-  const handleError = () => setPath('https://web-deli.com/image/home_chara.gif');
+  const handleError = () => setPath(noimage);
   return (
     <img src={path} alt={alt} onError={handleError} />
   );

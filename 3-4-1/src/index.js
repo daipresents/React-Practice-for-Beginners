@@ -15,7 +15,7 @@ root.render(
 
     <EventCompare />
 
-    <EventError src='https://web-deli.com/image/nothing.gif' alt="サンプル画像" />
+    <EventError src='../images/nothing.jpg' alt="サンプル画像" />
   </React.StrictMode>
 );
 
