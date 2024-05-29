@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import ListTemplate from './ListTemplate';
 import RenderProps from './RenderProps';
 import StateBasic from './StateBasic';
+import StateParent from './StateParent';
 import StyledPanel from './StyledPannel';
 import TitledPanel from './TitledPanel';
 import books from './books';
@@ -16,8 +17,12 @@ const body = <p>ようこそ、WINGSプロジェクトへ！</p>;
 root.render(
   <React.StrictMode>
     <>
+      <StateParent />
+      <hr />
+
       <StateBasic init={0} />
       <hr />
+
       <RenderProps src={books} render={renderElem => (
         <>
           <dt>
