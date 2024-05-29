@@ -1,14 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import EventArgs from './EventArgs';
 import EventCompare from './EventCompare';
 import EventError from './EventError';
+import EventKey from './EventKey';
 import EventMouse from './EventMouse';
+import EventObj from './EventObj';
+import EventPoint from './EventPoint';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <EventArgs />
+    <hr />
+
+    <EventKey />
+    <hr />
+
+    <EventPoint />
+    <hr />
+
+    <p style={{ marginTop: 300 }}>
+      <EventObj />
+      <hr />
+    </p>
+
     <EventMouse alt="ロゴ画像"
       beforeSrc="https://web-deli.com/image/linkbanner_l.gif"
       afterSrc="https://web-deli.com/image/home_chara.gif" />
@@ -16,7 +34,7 @@ root.render(
     <EventCompare />
 
     <EventError src='../images/nothing.jpg' alt="サンプル画像" />
-  </React.StrictMode>
+  </React.StrictMode >
 );
 
 // If you want to start measuring performance in your app, pass a function
