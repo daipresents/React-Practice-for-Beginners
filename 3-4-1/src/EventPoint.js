@@ -21,6 +21,6 @@ export default function EventPoint() {
       client: {client.x}/{client.y}<br />
       offset: {offset.x}/{offset.y}
     </div>
-  );
+  )
 }
 

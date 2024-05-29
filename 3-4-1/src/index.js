@@ -6,26 +6,43 @@ import EventError from './EventError';
 import EventKey from './EventKey';
 import EventMouse from './EventMouse';
 import EventObj from './EventObj';
+import EventOnce from './EventOnce';
+import EventPassive from './EventPassive';
 import EventPoint from './EventPoint';
+import EventPropagation from './EventPropagation';
+import EventPropagationCap from './EventPropagationCap';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <EventArgs />
-    <hr />
-
     <EventKey />
     <hr />
 
     <EventPoint />
     <hr />
 
-    <p style={{ marginTop: 300 }}>
+
+    <div style={{ marginTop: 300 }}>
+      <EventPassive />
+      <hr />
+
+      <EventOnce />
+      <hr />
+
+      <EventPropagationCap />
+      <hr />
+
+      <EventPropagation />
+      <hr />
+
+      <EventArgs />
+      <hr />
+
       <EventObj />
       <hr />
-    </p>
+    </div>
 
     <EventMouse alt="ロゴ画像"
       beforeSrc="https://web-deli.com/image/linkbanner_l.gif"
