@@ -5,6 +5,7 @@ import ForFilter from './ForFilter';
 import ForList from './ForList';
 import ForSort from './ForSort';
 import MyHello from './MyHello';
+import SelectStyle from './SelectStyle';
 import StateBasic from './StateBasic';
 import books from './books';
 import './index.css';
@@ -13,6 +14,16 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <>
+      <p>
+        <SelectStyle mode='light' />
+      </p>
+      <hr />
+
+      <p>
+        <SelectStyle mode='dark' />
+      </p>
+      <hr />
+
       <p>
         <MyHello myName="鈴木" />
       </p>
