@@ -1,4 +1,5 @@
 export default function EventBasic({ type }) {
+  // イベントハンドラー
   const current = () => {
     const d = new Date();
 

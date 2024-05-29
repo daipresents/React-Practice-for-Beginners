@@ -1,5 +1,6 @@
 import React from 'react';
 
+// 分割代入している
 export default function ListTemplate({ src, children }) {
   return (
     <dl>

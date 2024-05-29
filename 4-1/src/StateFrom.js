@@ -10,7 +10,7 @@ export default function StateForm() {
   const handleForm = e => {
     setForm({
       ...form,
-      //算出プロパティ名
+      //算出プロパティ名: プロパティ名を動的に生成。
       [e.target.name]: e.target.value
     });
   };
