@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import StateNest from './StateNest';
 import StateNestImmer from './StateNestImmer';
 import StateNestImmer2 from './StateNestImmer2';
+import StateTodo from './StateTodo';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
@@ -10,6 +11,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <>
+      <StateTodo />
+      <hr />
       <StateNestImmer2 />
       <hr />
       <StateNestImmer />
