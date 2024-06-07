@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import FormBasic from './FormBasic';
+import FormYup from './FormYup';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
@@ -8,6 +9,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <>
+      <FormYup />
+      <hr />
       <FormBasic />
     </>
   </React.StrictMode>
