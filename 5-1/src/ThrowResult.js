@@ -9,7 +9,7 @@ export default function ThrowResult() {
 function getInfo() {
   return wrapPromise(new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (Math.random() > 0.5) {
+      if (Math.random() > 0.1) {
         resolve('Succeeded!!');
       } else {
         reject('Error!!');
