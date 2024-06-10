@@ -1,7 +1,12 @@
+/** @jsxImportSource @emotion/react */
+import { css, Global } from '@emotion/react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import EmotionComponents from './EmotionComponents';
+import EmotionJsx from './EmotionJsx';
+import './index.css';
+import reportWebVitals from './reportWebVitals';
 import StyledBasic from './StyleBasic';
-import StyledDynamic from './StyleDynamic';
 import StyledCommon from './StyledCommon';
 import StyledComponent from './StyledComponents';
 import { MyButton, MyStyledButton } from './StyledComponents2';
@@ -9,13 +14,33 @@ import StyledComponentsProps from './StyledComponentsProps';
 import StyledCss from './StyledCss';
 import StyledCssGlobal from './StyledCssGlobal';
 import GlobalStyle from './StyledGlobal';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
+import StyledDynamic from './StyleDynamic';
+
+const globalEmotion = css`
+  .globalEmotion {
+    background-color: Yellow;
+  }
+`;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <>
+      <h1>Emotion</h1>
+
+      <h2>グローバルなスタイルを定義する</h2>
+      <Global styles={globalEmotion} />
+      <div class="globalEmotion">グローバルを適用するところはここ</div>
+      <hr />
+
+      <h2>Styled ComponentsぽいEmotion</h2>
+      <EmotionComponents />
+      <hr />
+
+      <h2>Styled JSXぽい Emotion</h2>
+      <EmotionJsx />
+      <hr />
+
       <h1>Styled Components</h1>
 
       <h2>Props経由で動的なスタイルを設定する</h2>
