@@ -1,13 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import StyledBasic from './StyleBasic';
+import StyledDynamic from './StyleDynamic';
+import StyledCss from './StyledCss';
+import StyledCssGlobal from './StyledCssGlobal';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <>
+      <StyledDynamic theme={{
+        radius: true,
+        color: 'pink'
+      }} />
+      <hr />
+
+      <h3 class="external">Styled JSXの外部化 Global化</h3>
+      <StyledCssGlobal />
+      <hr />
+
+      <h3>Styled JSXの外部化</h3>
+      <StyledCss />
+      <hr />
+
+      <h3 class="basic">Styled JSXの基本</h3>
+      <StyledBasic />
+    </>
   </React.StrictMode>
 );
 
