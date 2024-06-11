@@ -1,15 +1,25 @@
+import { CssBaseline, ThemeProvider } from '@mui/material';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import MaterialBasic from './MaterialBasic';
+import MaterialBasicTheme from './MaterialBasicTheme';
 import MaterialDrawer from './MaterialDrawer';
 import MaterialGrid from './MaterialGrid';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import theme from './theme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <>
+      <h1>Theme</h1>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <MaterialBasicTheme />
+      </ThemeProvider>
+
+      <h1>MUI Basic</h1>
       <MaterialGrid />
       <MaterialDrawer />
       <MaterialBasic />
