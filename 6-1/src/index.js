@@ -5,6 +5,8 @@ import MaterialBasic from './MaterialBasic';
 import MaterialBasicTheme from './MaterialBasicTheme';
 import MaterialDrawer from './MaterialDrawer';
 import MaterialGrid from './MaterialGrid';
+import MaterialMode from './MaterialMode';
+import MaterialModeSystem from './MaterialModeSystem';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import theme from './theme';
@@ -14,6 +16,12 @@ root.render(
   <React.StrictMode>
     <>
       <h1>Theme</h1>
+      <h2>System</h2>
+      <MaterialModeSystem />
+
+      <h2>ダークモード</h2>
+      <MaterialMode />
+
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <MaterialBasicTheme />
