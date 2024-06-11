@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import MaterialBasic from './MaterialBasic';
+import MaterialDrawer from './MaterialDrawer';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
@@ -8,6 +9,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <>
+      <MaterialDrawer />
       <MaterialBasic />
     </>
   </React.StrictMode>
