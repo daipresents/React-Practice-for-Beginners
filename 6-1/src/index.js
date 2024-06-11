@@ -1,6 +1,7 @@
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import FormMui from './FormMui';
 import MaterialBasic from './MaterialBasic';
 import MaterialBasicTheme from './MaterialBasicTheme';
 import MaterialDrawer from './MaterialDrawer';
@@ -15,6 +16,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <>
+      <h1>React Hook Form + MUI</h1>
+      <FormMui />
+
       <h1>Theme</h1>
       <h2>System</h2>
       <MaterialModeSystem />
