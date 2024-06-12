@@ -7,6 +7,7 @@ const preview = {
         date: /Date$/i,
       },
     },
+    actions: { argTypesRegex: "^(on|handle)[A-Z].*" },
   },
 };
 
