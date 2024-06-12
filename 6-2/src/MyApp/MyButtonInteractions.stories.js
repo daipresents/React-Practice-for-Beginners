@@ -12,6 +12,11 @@ export default {
     // 👇 Use `fn` to spy on the onSubmit arg
     onClick: fn(),
   },
+
+  // レイアウトを使ったレイアウト適用
+  parameters: {
+    layout: 'centered',
+  },
 };
 
 /*
