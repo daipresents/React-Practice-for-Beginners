@@ -6,7 +6,6 @@ export default function MyButtonAction({
   backgroundColor = null,
   size = 'medium',
   label = 'Button',
-  handleClick,
   ...props
 }) {
 
@@ -17,10 +16,10 @@ export default function MyButtonAction({
       type="button"
       className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
       style={backgroundColor && { backgroundColor }}
-      onClick={handleClick}
       {...props}
     >
       {label}
+
     </button>
   );
 };
@@ -28,14 +27,18 @@ export default function MyButtonAction({
 // PropTypesでControlsタブの定義を指定できる。
 MyButtonAction.propTypes = {
   /**
-   * Primaryカラーを有効にするか？ このコメントは画面に表示される。
+   * Primaryカラーを有効にするか？ このコメントは画面に表示される（けどなぜかでなくなった）
    */
   primary: PropTypes.bool,
   backgroundColor: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   label: PropTypes.string.isRequired,
-  // onClick: PropTypes.func,
-  // onXXXでなくてもOKだが、このままではActionタブに表示されない。ので以下が必要。
-  // 1. .storybook/preview.jsに「actions: { argTypesRegex: "^(on|handle)[A-Z].*" },」を追加すれば表示される
-  handleClick: PropTypes.func,
+
+  // これを書いているけどWhiteボタンのアクションが動かんなぁ
+
+  /**
+   * 例：
+   * () => console.log('Hello, Index!!'),
+   */
+  onClick: PropTypes.func,
 };

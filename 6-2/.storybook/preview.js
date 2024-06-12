@@ -6,8 +6,7 @@ const preview = {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
-    },
-    actions: { argTypesRegex: "^(on|handle)[A-Z].*" },
+    }
   },
 };
 

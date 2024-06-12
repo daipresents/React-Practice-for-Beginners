@@ -10,9 +10,16 @@ const config = {
     "@storybook/addon-interactions",
   ],
   framework: {
-    name: "@storybook/react-webpack5",
-    options: {},
+    name: '@storybook/react-webpack5',
+    options: {
+      stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+      addons: [
+        // Other Storybook addons
+        '@storybook/addon-interactions', // 👈 Register the addon
+      ],
+      staticDirs: ["../public"],
+    },
   },
-  staticDirs: ["../public"],
 };
+
 export default config;
