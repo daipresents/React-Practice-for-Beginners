@@ -1,13 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import QueryBasic from './QueryBasic';
 import QueryPre from './QueryPre';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
+const cli = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <>
+      <h1>React Queryを使う場合</h1>
+      <QueryClientProvider client={cli}>
+        <QueryBasic />
+      </QueryClientProvider>
+
+      <h1>feachを使う場合</h1>
       <QueryPre />
     </>
   </React.StrictMode >
