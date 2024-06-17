@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import HookEffect from './HookEffect';
 import HookRefForward from './HookRefForward';
+import HookRefImperativeHandle from './HookRefImperativeHandle';
 import HookRefNg from './HookRefNg';
 import HookTimer from './HookTimer';
 import StateEffect from './StateEffect';
@@ -12,6 +13,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <>
+      <h1>関数コンポーネント配下のメソッドを参照する</h1>
+      <HookRefImperativeHandle />
+
       <h1>Refをコンポーネントは以下の要素にフォワードする</h1>
       <HookRefForward />
 
