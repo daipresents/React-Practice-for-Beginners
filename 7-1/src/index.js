@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import HookEffect from './HookEffect';
 import HookTimer from './HookTimer';
 import StateEffect from './StateEffect';
 import './index.css';
@@ -9,6 +10,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <>
+      <h1>描画時に同期的に処理を実行する</h1>
+      <HookEffect init={10} />
+
       <h1>副作用フックを利用したタイマー</h1>
       <HookTimer init={10} />
 
