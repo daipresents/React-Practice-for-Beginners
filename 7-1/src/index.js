@@ -1,19 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import HookEffect from './HookEffect';
+import HookRefForward from './HookRefForward';
+import HookRefNg from './HookRefNg';
 import HookTimer from './HookTimer';
 import StateEffect from './StateEffect';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import HookRefNg from './HookRefNg';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <>
+      <h1>Refをコンポーネントは以下の要素にフォワードする</h1>
+      <HookRefForward />
+
       <h1>関数コンポーネントでインスタンス変数を定義する</h1>
       <HookRefNg />
-      
+
       <h1>描画時に同期的に処理を実行する</h1>
       <HookEffect init={10} />
 
