@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import HookCallbackRef from './HookCallbackRef';
+import HookCallbackRef2 from './HookCallbackRef2';
 import HookEffect from './HookEffect';
-import HookRefForward from './HookRefForward';
-import HookRefImperativeHandle from './HookRefImperativeHandle';
 import HookRefNg from './HookRefNg';
 import HookTimer from './HookTimer';
 import StateEffect from './StateEffect';
@@ -13,11 +13,18 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <>
+      <h1>コールバック関数をref属性に引き渡す。コールバックRef</h1>
+      <h2>コールバックRef</h2>
+      <HookCallbackRef2 />
+
+      <h2>いまいち</h2>
+      <HookCallbackRef />
+
       <h1>関数コンポーネント配下のメソッドを参照する</h1>
-      <HookRefImperativeHandle />
+      {/* フォーカスを使うのでためすときはここだけコメントアウト <HookRefImperativeHandle /> */}
 
       <h1>Refをコンポーネントは以下の要素にフォワードする</h1>
-      <HookRefForward />
+      {/* フォーカスを使うのでためすときはここだけコメントアウト <HookRefForward /> */}
 
       <h1>関数コンポーネントでインスタンス変数を定義する</h1>
       <HookRefNg />
