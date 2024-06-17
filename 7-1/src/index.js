@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import HookTimer from './HookTimer';
 import StateEffect from './StateEffect';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -8,6 +9,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <>
+      <h1>副作用フックを利用したタイマー</h1>
+      <HookTimer init={10} />
+
+      <h1>ボタンクリックのサンプル</h1>
       <StateEffect init={0} />
     </>
   </React.StrictMode>
