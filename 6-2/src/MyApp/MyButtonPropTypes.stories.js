@@ -11,6 +11,8 @@ export default {
       control: { type: 'select' },
     },
   },
+  // ドキュメントの追加
+  tags: ['autodocs'],
 };
 
 export const IndexPropTypes = {

@@ -13,21 +13,26 @@ export default {
     //     { name: 'coral', value: '#ff7f50' },
     //   ],
     // },
+    // レイアウト設定（デコレータとぶつかるとうまくいかないので注意）
+    layout: 'centered',
   },
   // デコレーターを使った独自レイアウト適用
-  decorators: [
-    Story => (
-      <div style={{
-        height: 150,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#ccc',
-      }}>
-        <Story />
-      </div>
-    ),
-  ],
+  // decorators: [
+  //   Story => (
+  //     <div style={{
+  //       height: 150,
+  //       display: 'flex',
+  //       justifyContent: 'center',
+  //       alignItems: 'center',
+  //       backgroundColor: '#ccc',
+  //     }}>
+  //       <Story />
+  //     </div>
+  //   ),
+  // ],
+  // ドキュメントの追加
+  // MDXファイルを使う場合はコメントアウトが必要
+  //tags: ['autodocs'],
 };
 
 export const Index = {
