@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import HookReducer from './HookReducer';
+import HookReducerInit from './HookReducerInit';
 import HookreducerUp from './HookReducerUp';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -8,6 +9,9 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <h1>Stateの初期値を生成する場合の注意点</h1>
+    <HookReducerInit init={0} />
+
     <h1>Reducerを複数のAction型に対応する</h1>
     <HookreducerUp init={0} />
 
