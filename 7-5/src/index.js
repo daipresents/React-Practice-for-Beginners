@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RecoilRoot } from 'recoil';
 import RecoilCounter from './RecoilCounter';
+import RecoilTodo from './RecoilTodo';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
@@ -10,6 +11,10 @@ root.render(
   <React.StrictMode>
     <>
       <RecoilRoot>
+        <h1>Recoil Todoリスト</h1>
+        <RecoilTodo />
+
+        <h1>Recoil カウンター</h1>
         <RecoilCounter />
       </RecoilRoot>
     </>
