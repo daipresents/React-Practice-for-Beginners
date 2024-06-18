@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import HookContext from './HookContext';
 import HookReducer from './HookReducer';
 import HookReducerInit from './HookReducerInit';
 import HookreducerUp from './HookReducerUp';
@@ -9,6 +10,9 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <h1>コンテキストの基本</h1>
+    <HookContext />
+
     <h1>Stateの初期値を生成する場合の注意点</h1>
     <HookReducerInit init={0} />
 
