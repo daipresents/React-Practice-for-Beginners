@@ -4,12 +4,19 @@ import HookContext from './HookContext';
 import HookReducer from './HookReducer';
 import HookReducerInit from './HookReducerInit';
 import HookreducerUp from './HookReducerUp';
+import HookThemeButton from './HookThemeButton';
+import MyThemeProvider from './MyThemeProvider';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <h1>コンテキストを利用してテーマ切り替えを実装する</h1>
+    <MyThemeProvider>
+      <HookThemeButton />
+    </MyThemeProvider>
+
     <h1>コンテキストの基本</h1>
     <HookContext />
 
