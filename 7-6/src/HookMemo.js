@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { MyButton, MyCounter } from './HookMemoChild';
 
 const sleep = delay => {
@@ -13,17 +13,18 @@ export default function HookMemo() {
   const increment = () => setCount1(c => c + 1);
   const decrement = () => setCount2(c => c - 1);
 
-  const heavyProcess = () => {
+  const heavyProcess = useMemo(() => {
     sleep(1000);
     return count1 + 100;
-  };
+  }, [count1]);
 
   return (
     <>
       <div>
         <MyButton id='btn1' handleClick={increment}>カウントアップ</MyButton>
         <MyCounter id='c1' value={count1} /> /
-        {heavyProcess()}
+        {/** 毎回読み込みが重くなる部分。Stateが変わるたびに再描画となり呼び出されてしまう */}
+        {heavyProcess}
       </div>
       <div>
         <MyButton id='btn2' handleClick={decrement}>カウントダウン</MyButton>
