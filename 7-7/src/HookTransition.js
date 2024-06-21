@@ -29,8 +29,11 @@ export default function HookTransition() {
         ))}
       </select>
       <BookDetails isbn={isbn} />
+
       <hr />
-      <CommentList src={comments} />
+
+      {/** 何もしないとコメントだけuseTransitionで遅れて表記されるので、 isPendingを使ってローディング状態を示す */}
+      <CommentList src={comments} isPending={isPending} />
     </>
   );
 }
