@@ -1,4 +1,4 @@
-import { useReducer } from 'react';
+import { useDebugValue, useReducer } from 'react';
 
 export default function useCounter(init, step) {
   // カウンターを管理するためのState/Reducerを準備
@@ -17,6 +17,9 @@ export default function useCounter(init, step) {
       count: init
     }
   );
+
+  // カスタムフック内の値を監視。React Developer Toolsに表示できる。
+  useDebugValue(state.count >= 10 ? '10 over' : '10 less');
 
   const handleUp = () => dispatch({ type: 'update', step });
   const handleDown = () => dispatch({ type: 'update', step: -step });
