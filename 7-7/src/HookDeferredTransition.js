@@ -3,6 +3,9 @@ import { BookDetails, CommentList } from './HookTransitionChild';
 import books from './books';
 import commentList from './comments';
 
+/**
+ * Stateの更新処理にコミットできる状況にあるならば、useTransition。外部ライブラリを使っていて結果の値だけが見えているならuseDeferredValue。
+ */
 export default function HookDeferredTransition() {
   const [isbn, setIsbn] = useState('');
   const [comments, setComments] = useState([]);
