@@ -1,3 +1,6 @@
+import { useParams } from 'react-router-dom';
+
 export default function BookPage() {
-  return <p>bookページです</p>;
+  const params = useParams();
+  return <p>ISBNコード 「{params.isbn}」のページです</p>;
 }
