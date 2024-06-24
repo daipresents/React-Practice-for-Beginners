@@ -12,6 +12,7 @@ export default function RouterParam() {
         <li><NavLink to="/search/react/router/remix">検索結果</NavLink></li>
         <li><NavLink to="/nothing/foo/bar">存在しないページ</NavLink></li>
         <li><NavLink to="/bookQuery?isbn=4321">クエリ版</NavLink></li>
+        <li><NavLink to="/bookState" state="1234567-7654">State版</NavLink></li>
       </ul>
       <hr />
       <Outlet />

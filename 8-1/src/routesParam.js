@@ -1,6 +1,7 @@
 import { Route, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import BookPage from './Book';
 import BookQueryPage from './BookQueryPage';
+import BookStatePage from './BookStatePage';
 import NotFoundPage from './NotFoundPage';
 import RouterParam from './RouterParam';
 import SearchPage from './SearchPage';
@@ -22,6 +23,9 @@ const routesParam = createBrowserRouter(
 
       {/* クエリ情報を取得 */}
       <Route path="/bookQuery" element={<BookQueryPage />} />
+
+      {/* State属性 */}
+      <Route path="/bookState" element={<BookStatePage />} />
     </Route>
   )
 );
