@@ -1,9 +1,14 @@
+import { useState } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import './RouterNav.css';
 
 export default function RouterParam() {
+
+  const [count, setCount] = useState(0);
+
   return (
     <>
+      <p>アクセス数: {count}</p>
       <ul>
         <li><NavLink to="/">トップ</NavLink></li>
         <li><NavLink to="/book" end>/book 規定の書籍</NavLink></li>
@@ -15,7 +20,7 @@ export default function RouterParam() {
         <li><NavLink to="/bookState" state="1234567-7654">State版</NavLink></li>
       </ul>
       <hr />
-      <Outlet />
+      <Outlet context={[count, setCount]} />
     </>
-  )
+  );
 }
