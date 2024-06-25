@@ -1,7 +1,7 @@
 import { Route, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import AboutPage from './AboutPage';
 import ArticlePage from './ArticlePage';
-import BookPage from './Book';
+import BookPage from './BookPage';
 import Book1234Page from './Book1234';
 import InfoPage from './InfoPage';
 import RouterApp from './RouterApp';

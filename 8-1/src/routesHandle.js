@@ -1,5 +1,5 @@
 import { Route, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
-import BookPage from './Book';
+import BookPage from './BookPage';
 import RouterParam from './RouterParam';
 import TopPage from './TopPage';
 

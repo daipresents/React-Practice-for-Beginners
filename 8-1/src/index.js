@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { HelmetProvider } from 'react-helmet-async';
+//import { HelmetProvider } from 'react-helmet-async';
 import { RouterProvider } from 'react-router-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import routesHandle from './routesHandle';
+//import routesHandle from './routesHandle';
+import routesParam from './routesParam';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,10 +13,10 @@ root.render(
     <>
       {/* <RouterProvider router={routesBasic} /> */}
       {/* <RouterProvider router={routesLink} /> */}
-      {/* <RouterProvider router={routesParam} /> */}
-      <HelmetProvider>
+      <RouterProvider router={routesParam} />
+      {/* <HelmetProvider>
         <RouterProvider router={routesHandle} />
-      </HelmetProvider>
+      </HelmetProvider> */}
     </>
   </React.StrictMode>
 );
