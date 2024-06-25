@@ -5,6 +5,7 @@ import { RouterProvider } from 'react-router-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 //import routesHandle from './routesHandle';
+import { HelmetProvider } from 'react-helmet-async';
 import routesParam from './routesParam';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -13,7 +14,9 @@ root.render(
     <>
       {/* <RouterProvider router={routesBasic} /> */}
       {/* <RouterProvider router={routesLink} /> */}
-      <RouterProvider router={routesParam} />
+      <HelmetProvider>
+        <RouterProvider router={routesParam} />
+      </HelmetProvider>
       {/* <HelmetProvider>
         <RouterProvider router={routesHandle} />
       </HelmetProvider> */}

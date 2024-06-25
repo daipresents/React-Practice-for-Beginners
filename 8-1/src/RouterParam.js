@@ -11,6 +11,7 @@ export default function RouterParam() {
       <p>アクセス数: {count}</p>
       <ul>
         <li><NavLink to="/">トップ</NavLink></li>
+        <li><NavLink to="/book/form">書籍登録フォーム</NavLink></li>
         <li><NavLink to="/book" end>/book 規定の書籍</NavLink></li>
         <li><NavLink to="/book/978-4-7981-7613-0">/book/:isbn</NavLink></li>
         <li><NavLink to="/book/978-4-627-85711-7">/book/:isbn</NavLink></li>
