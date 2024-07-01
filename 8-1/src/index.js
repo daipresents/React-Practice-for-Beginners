@@ -6,24 +6,37 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 //import routesHandle from './routesHandle';
 import { HelmetProvider } from 'react-helmet-async';
-import routesMyLink from './routesMyLink';
+import routesScroll from './routesScroll';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <>
+      {/** ルーティングの基本 */}
       {/* <RouterProvider router={routesBasic} /> */}
+
+      {/** リンク設置の基本 */}
       {/* <RouterProvider router={routesLink} /> */}
+
+      {/** ルーター経由で情報を受けわたす */}
       {/* <HelmetProvider>
         <RouterProvider router={routesParam} />
       </HelmetProvider> */}
+
+      {/** ルート固有の情報を取得する handle属性 */}
       {/* <HelmetProvider>
         <RouterProvider router={routesHandle} />
       </HelmetProvider> */}
-      <HelmetProvider>
-        <RouterProvider router={routesMyLink} />
-      </HelmetProvider>
 
+      { /** 現在のページへのリンクを解除する */}
+      {/* <HelmetProvider>
+        <RouterProvider router={routesMyLink} />
+      </HelmetProvider> */}
+
+      {/** スクロール位置を復元する ScrollRestoration */}
+      <HelmetProvider>
+        <RouterProvider router={routesScroll} />
+      </HelmetProvider>
     </>
   </React.StrictMode>
 );
