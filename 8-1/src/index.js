@@ -6,7 +6,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 //import routesHandle from './routesHandle';
 import { HelmetProvider } from 'react-helmet-async';
-import routesParam from './routesParam';
+import routesMyLink from './routesMyLink';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,12 +14,16 @@ root.render(
     <>
       {/* <RouterProvider router={routesBasic} /> */}
       {/* <RouterProvider router={routesLink} /> */}
-      <HelmetProvider>
+      {/* <HelmetProvider>
         <RouterProvider router={routesParam} />
-      </HelmetProvider>
+      </HelmetProvider> */}
       {/* <HelmetProvider>
         <RouterProvider router={routesHandle} />
       </HelmetProvider> */}
+      <HelmetProvider>
+        <RouterProvider router={routesMyLink} />
+      </HelmetProvider>
+
     </>
   </React.StrictMode>
 );
