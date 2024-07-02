@@ -5,7 +5,7 @@ type StateBasicProps = {
 };
 
 export default function StateBasic({ init }: StateBasicProps) {
-  const [count, setCount] = useState(init);
+  const [count, setCount] = useState<number>(init);
   console.log(`count is ${count}.`);
   const handleClick = () => setCount(count + 1);
 
