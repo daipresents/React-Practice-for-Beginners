@@ -4,3 +4,7 @@
   - type 型名 = 型定義
 - インターフェイス
   - interface インターフェイス名
+- 型アサーション
+  - as 型名
+  - アングルブラケット構文は tsx ファイルでできない
+    - e.g. <HTMLElement> document.getElementById('root')
