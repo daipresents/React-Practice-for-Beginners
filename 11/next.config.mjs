@@ -8,6 +8,9 @@ const nextConfig = {
       {
         hostname: 'books.google.com'
       },
+      {
+        hostname: 'daipresents.files.wordpress.com'
+      },
     ]
   },
 };
